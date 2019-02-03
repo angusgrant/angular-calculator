@@ -53,8 +53,15 @@ body {
 
 .calculator .calculator__button--operator {
     color: #5FB2DE;
+    font-weight: bold;
 }
 
 .calculator .calculator__button--equals {
     color: #CC528A;
+    font-weight:bold;
+}
+
+.calculator .calculator__button--clear {
+    color: grey;
+    font-size:32px;
 }

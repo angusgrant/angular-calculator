@@ -3,9 +3,9 @@
     <input type="number" class="calculator__screen" [value]="getDisplayValue()" placeholder="0">
 
   <div class="calculator__keys">
-  <button class="calculator__button" (click)="clickOperator('allClear')">AC</button>
-  <button class="calculator__button">CE</button>
-  <button class="calculator__button">&nbsp;</button>
+  <button class="calculator__button calculator__button--clear" (click)="clickOperator('allClear')">AC</button>
+  <button class="calculator__button calculator__button--clear">CE</button>
+  <button class="calculator__button ">&nbsp;</button>
   <button class="calculator__button calculator__button--operator" (click)="clickOperator('divide')">&divide;</button>
   <button class="calculator__button" (click)="clickNumber(7)">7</button>
   <button class="calculator__button" (click)="clickNumber(8)">8</button>
