@@ -17,14 +17,9 @@ export class CalculatorComponent  {
         this.state.value = 0;
         this.state.newlyClickedOperator = false;
     }
-    let newValue: number;
-    if (this.state.hasDot == true){
-        this.state.decimalLength += 1;
-        newValue = this.state.value + (num / Math.pow(10, this.state.decimalLength));
-        newValue = parseFloat(newValue.toPrecision(this.state.decimalLength));
-    } else {
-        newValue = this.state.value * 10 + num;
-    }
+
+    const newValue = this.state.value * 10 + num;
+    
     if (newValue < 100000000) {
         this.state.value = newValue;
         this.state.newlyClickedNumber = true;
