@@ -50,3 +50,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.calculator .calculator__button--operator {
+    color: #5FB2DE;
+}
+
+.calculator .calculator__button--equals {
+    color: #CC528A;
+}
