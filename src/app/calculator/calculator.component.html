@@ -1,0 +1,27 @@
+<div class="calculator">
+   
+    <input type="number" class="calculator__screen" [value]="getDisplayValue()" placeholder="0">
+
+  <div class="calculator__keys">
+  <button class="calculator__button" (click)="clickOperator('allClear')">AC</button>
+  <button class="calculator__button">CE</button>
+  <button class="calculator__button">&nbsp;</button>
+  <button class="calculator__button" (click)="clickOperator('divide')">&divide;</button>
+  <button class="calculator__button" (click)="clickNumber(7)">7</button>
+  <button class="calculator__button" (click)="clickNumber(8)">8</button>
+  <button class="calculator__button" (click)="clickNumber(9)">9</button>
+  <button class="calculator__button" (click)="clickOperator('multiply')">&times;</button>
+  <button class="calculator__button" (click)="clickNumber(4)">4</button>
+  <button class="calculator__button" (click)="clickNumber(5)">5</button>
+  <button class="calculator__button" (click)="clickNumber(6)">6</button>
+  <button class="calculator__button" (click)="clickOperator('minus')">&minus;</button>
+  <button class="calculator__button" (click)="clickNumber(1)">1</button>
+  <button class="calculator__button" (click)="clickNumber(2)">2</button>
+  <button class="calculator__button" (click)="clickNumber(3)">3</button>
+  <button (click)="clickOperator('add')" class="calculator__button">&#43;</button>
+  <button class="calculator__button" (click)="clickNumber(0)">0</button>
+  <button class="calculator__button">&nbsp;</button>
+  <button class="calculator__button" (click)="clickOperator('dot')">.</button>
+  <button (click)="clickOperator('equal')" class="calculator__button">&#61;</button>
+  </div>
+</div>

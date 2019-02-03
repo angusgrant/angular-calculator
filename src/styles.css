@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E6E6E6;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Inconsolata', monospace;
+    
+}
+
+.calculator {
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px 0px #ccc;
+    border-radius: 5px;
+    background-color: #FCFCFC;
+}
+
+.calculator .calculator__button {
+   color: #333;
+   font-size: 36px;
+   border: none;
+   cursor: pointer;
+   padding:20px;
+   font-weight:normal;
+   background: transparent;
+}
+
+.calculator .calculator__screen {
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline:none;
+    padding: 10px 40px;
+    width:100%;
+    color: #333;
+    text-align: right;
+    border-radius: 0;
+    border-bottom: 1px solid #ccc;
+    margin-top:30px;
+    font-size: 40px;
+}
+
+.calculator .calculator__keys {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
