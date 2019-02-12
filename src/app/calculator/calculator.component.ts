@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Statement } from '@angular/compiler';
    
 @Component({
   selector: 'app-calculator',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent  {
   
-  
+  operators = Operator;
   state: State = INITIAL_STATE;
   constructor( ) { }
 
@@ -17,11 +18,17 @@ export class CalculatorComponent  {
         this.state.value = 0;
         this.state.newlyClickedOperator = false;
     }
-
-    const newValue = this.state.value * 10 + num;
+    const existingValue = this.state.value;
+    let newValue :string;
+        if (this.state.hasDot){
+            newValue = existingValue.toString() + "." + num.toString();
+            this.state.hasDot = false;
+        } else {
+            newValue = existingValue.toString() + num.toString();
+        }
     
-    if (newValue < 100000000) {
-        this.state.value = newValue;
+    if (newValue.length < 10000000) {
+        this.state.value = Number(newValue);
         this.state.newlyClickedNumber = true;
     }
   }
@@ -47,7 +54,6 @@ export class CalculatorComponent  {
             this.updateStateOperations(this.state);
             this.displayLastPossibleValue(true);
             this.state.operator = operator;
-            
             break;
         case Operator.equal:
             this.updateStateOperations(this.state, operator);
@@ -184,7 +190,6 @@ getDisplayValue() {
     } else {
         result = this.state.displayValue || this.state.value;
     }
-    
     return result;
 }
 
